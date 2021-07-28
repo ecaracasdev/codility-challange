@@ -82,5 +82,64 @@ const f = isPalindrome('do geese see god')
 console.log(f)
 
 /**
- * 
+ * Create an Object with a hello method that writes hello <name> in the console
  */
+
+const p = {
+  name: 'Elias',
+  hello: () => console.log(`Hello ${p.name}`)
+}
+
+p.hello()
+p.name = 'Jose'
+p.hello()
+
+/**
+ * How would you make the name inmutable?
+ */
+
+Object.freeze(p)
+p.name = 'Simon'
+p.hello()
+
+/**
+ * write a function that logs the 5 cities that occur the most in the 
+ * array below in order from the most number of ocurrences to least
+ */
+const citiesList = [
+  'caracas',
+  'caba',
+  'caba',
+  'caba',
+  'lima',
+  'lima',
+  'lima',
+  'la plata',
+  'la plata',
+  'la plata',
+  'caracas',
+  'caracas',
+  'caracas',
+  'mar de plata',
+  'ciudad de mexico'
+]
+
+function logMostOcurrCities(numCities) {
+  const cities = {}
+
+  citiesList.forEach(city => {
+    cities[city] = !cities[city] ? 1 : cities[city] += 1
+  })
+
+  //no se puede ordenar un objeto, pero se puede ordenar un array -> hacemos a cities un array
+
+  return Object.keys(cities)
+    .map(city => ({ name: city, times: cities[city] }))
+    .sort((a, b) => b.times - a.times)
+    .slice(0, numCities)
+    .map(city => city.name)
+}
+
+const mostRepeatedCities = logMostOcurrCities(5)
+
+console.log(mostRepeatedCities)

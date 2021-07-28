@@ -4,7 +4,8 @@
   "description": "",
   "main": "training.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ecaracasdev/codility-challange/issues"
   },
-  "homepage": "https://github.com/ecaracasdev/codility-challange#readme"
+  "homepage": "https://github.com/ecaracasdev/codility-challange#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
 }
