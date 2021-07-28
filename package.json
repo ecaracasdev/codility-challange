@@ -1,0 +1,19 @@
+{
+  "name": "codility-challange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "training.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecaracasdev/codility-challange.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecaracasdev/codility-challange/issues"
+  },
+  "homepage": "https://github.com/ecaracasdev/codility-challange#readme"
+}
